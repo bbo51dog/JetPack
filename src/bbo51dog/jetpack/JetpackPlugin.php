@@ -4,6 +4,6 @@ namespace bbo51dog\jetpack;
 
 use pocketmine\plugin\PluginBase;
 
-class JetpackPlugin extends PluginBase{
+class JetPackPlugin extends PluginBase{
     
 }

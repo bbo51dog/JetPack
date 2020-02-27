@@ -1,6 +1,6 @@
 name: Jetpack
 api: [3.0.0]
-main: bbo51dog\jetpack\JetpackPlugin
+main: bbo51dog\jetpack\JetPackPlugin
 version: 1.0.0
-description: Jetpack plugin
+description: Jet pack plugin
 author: bbo51dog
