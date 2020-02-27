@@ -10,7 +10,7 @@ use bbo51dog\jetpack\item\JetPack;
 class JetPackPlugin extends PluginBase{
 
     public function onEnable(){
-        $jetpack = new JetPack(JetPack::ID, JetPack::META, JetPack::NAME);
+        $jetpack = new JetPack();
         ItemFactory::registerItem($jetpack);
         Item::addCreativeItem($jetpack);
     }

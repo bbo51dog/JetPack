@@ -15,6 +15,11 @@ class JetPack extends Armor{
     /** @var string */
     public const NAME = 'Jet Pack';
 
+    public function __construct(){
+        parent::__construct(self::ID, self::META, self::NAME);
+        $this->setUnbreakable();
+    }
+
     public function getMaxDurability(): int{
         return 0;
     }
