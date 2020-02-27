@@ -1,6 +1,6 @@
-name: Template
+name: Jetpack
 api: [3.0.0]
-main: bbo51dog\template\TemplatePlugin
+main: bbo51dog\jetpack\JetpackPlugin
 version: 1.0.0
-description: Description
+description: Jetpack plugin
 author: bbo51dog
