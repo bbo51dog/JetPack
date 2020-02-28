@@ -2,6 +2,7 @@
 
 namespace bbo51dog\jetpack;
 
+use pocketmine\Server;
 use bbo51dog\jetpack\task\ParticleTask;
 use pocketmine\item\Item;
 use pocketmine\event\Listener;
@@ -40,9 +41,7 @@ class EventListener implements Listener{
         $pk->z = $player->z;
         $pk->volume = 1;
         $pk->pitch = 1;
-        foreach ($player->getLevel()->getPlayers() as $target) {
-            $target->dataPacket($pk);
-        }
+        Server::getInstance()->broadcastPacket($player->getLevel()->getPlayers(), $pk);
         $this->scheduler->scheduleRepeatingTask(new ParticleTask($player), 2);
     }
 }
