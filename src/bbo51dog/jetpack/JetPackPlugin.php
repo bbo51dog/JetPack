@@ -13,6 +13,6 @@ class JetPackPlugin extends PluginBase{
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
-        $this->getServer()->getCommandMap()->register('jetpack', new JetPackCommand)
+        $this->getServer()->getCommandMap()->register('jetpack', new JetPackCommand());
     }
 }

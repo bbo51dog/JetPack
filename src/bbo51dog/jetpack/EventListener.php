@@ -20,8 +20,7 @@ class EventListener implements Listener{
         if($nbt->getTag('custom')->getValue() !== 'jetpack'){
             return;
         }
-        $event->setCancelled();
-    	$vector = $player->getDirectionVector();
-        $player->setMotion(new Vector3($vector->x * 0.5, 0.3, $vector->z * 0.5));
+        $vector = $player->getDirectionVector();
+        $player->setMotion(new Vector3($vector->x * 0.1 , 0.8, $vector->z * 0.1));
     }
 }
