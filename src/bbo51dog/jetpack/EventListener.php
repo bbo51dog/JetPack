@@ -8,6 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJumpEvent;
 use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\scheduler\TaskScheduler;
 
 class EventListener implements Listener{
@@ -31,6 +32,17 @@ class EventListener implements Listener{
         }
         $vector = $player->getDirectionVector();
         $player->setMotion(new Vector3($vector->x * 0.1 , 0.9, $vector->z * 0.1));
+        $pk = new PlaySoundPacket();
+        $pk = new PlaySoundPacket();
+        $pk->soundName = 'firework.launch';
+        $pk->x = $player->x;
+        $pk->y = $player->y;
+        $pk->z = $player->z;
+        $pk->volume = 1;
+        $pk->pitch = 1;
+        foreach ($player->getLevel()->getPlayers() as $target) {
+            $target->dataPacket($pk);
+        }
         $this->scheduler->scheduleRepeatingTask(new ParticleTask($player), 2);
     }
 }
