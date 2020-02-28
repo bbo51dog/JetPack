@@ -14,7 +14,7 @@ class JetPack extends ChainChestplate{
         $this->setUnbreakable();
         $this->setCustomName(self::NAME);
         $nbt = $this->getNamedTag();
-        $nbt->setByte('jetpack', true);
+        $nbt->setString('custom', 'jetpack');
         $this->setNamedTag($nbt);
     }
 }
