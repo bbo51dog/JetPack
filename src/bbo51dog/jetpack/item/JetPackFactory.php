@@ -8,8 +8,9 @@ use pocketmine\item\Item;
 class JetPackFactory{
 
     /** @var Item[] */
-    private static $items;
+    //private static $items;
 
+    /*
     public static function register(Item $item): void{
         $id = $item->getId();
         if(self::isRegistered($id)){
@@ -28,4 +29,5 @@ class JetPackFactory{
     public static function isRegistered(int $id): bool{
         return isset(self::$items[$id]);
     }
+    */
 }
