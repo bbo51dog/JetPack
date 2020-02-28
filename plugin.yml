@@ -4,3 +4,9 @@ main: bbo51dog\jetpack\JetPackPlugin
 version: 1.0.0
 description: Jet pack plugin
 author: bbo51dog
+permissions:
+  jetpack.*:
+    default: false
+    children:
+      jetpack.command:
+        default: true
