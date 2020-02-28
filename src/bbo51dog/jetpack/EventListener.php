@@ -25,7 +25,7 @@ class EventListener implements Listener{
         $player = $event->getPlayer();
         $jetpack = $player->getArmorInventory()->getChestplate();
         $nbt = $jetpack->getNamedTag() ?? new CompoundTag('', []);
-        if($jetpack->getId() !== Item::CHAIN_CHESTPLATE || empty($nbt->getTag('custom'))){
+        if($jetpack->getId() !== Item::CHAIN_CHESTPLATE || empty($nbt->getTag('custom') || $player->isSneaking())){
             return;
         }
         if($nbt->getTag('custom')->getValue() !== 'jetpack'){
