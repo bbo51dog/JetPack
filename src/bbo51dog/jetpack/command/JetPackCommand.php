@@ -23,7 +23,7 @@ class JetPackCommand extends Command{
         $inventory = $sender->getInventory();
         $jetpack = new JetPack();
         if($inventory->canAddItem($jetpack)){
-            if($inventory->getItemInHand()->getId === JetPack::AIR){
+            if($inventory->getItemInHand()->getId() === JetPack::AIR){
                 $inventory->setItemInHand($jetpack);
             }else{
                 $inventory->addItem($jetpack);
