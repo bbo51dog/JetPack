@@ -12,7 +12,7 @@ use bbo51dog\jetpack\item\JetPack;
 class JetPackPlugin extends PluginBase{
 
     public function onEnable(){
-        $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
-        $this->getServer()->getCommandMap()->register('jetpack', new JetPackCommand);
+        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this->getScheduler()), $this);
+        $this->getServer()->getCommandMap()->register('jetpack', new JetPackCommand());
     }
 }
