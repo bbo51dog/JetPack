@@ -34,7 +34,7 @@ class EventListener implements Listener{
             return;
         }
         $vector = $player->getDirectionVector();
-        $player->setMotion(new Vector3($vector->x * 0.1 , 0.9, $vector->z * 0.1));
+        $player->setMotion(new Vector3($vector->x * 0.1 , 1.1, $vector->z * 0.1));
         $pk = new PlaySoundPacket();
         $pk = new PlaySoundPacket();
         $pk->soundName = 'firework.launch';
